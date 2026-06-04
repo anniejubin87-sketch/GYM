@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#22c55e;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#22c55e;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#22c55e;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* Section */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:#22c55e;
+}
+
+/* Services */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+/* Trainers */
+
+.trainers{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.trainer{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.trainer img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.trainer-info{
+    padding:20px;
+}
+
+/* Plans */
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.plan{
+    background:#1e293b;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+}
+
+.plan h3{
+    color:#22c55e;
+}
+
+.price{
+    font-size:2.5rem;
+    margin:20px 0;
+    font-weight:bold;
+}
+
+.plan ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.plan ul li{
+    margin:10px 0;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#1e293b;
+    padding:40px;
+    border-radius:15px;
+}
+
+.contact p{
+    margin:12px 0;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.nav-container{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav>
+<div class="container nav-container">
+<div class="logo">PowerFit Gym</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#trainers">Trainers</a>
+<a href="#plans">Plans</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+<div class="container hero-content">
+<h1>Build Your <span>Best Body</span></h1>
+<p>
+Transform your fitness journey with expert trainers, modern equipment,
+and personalized workout programs designed to help you achieve your goals.
+</p>
+<a href="#plans" class="btn">Join Today</a>
+</div>
+</section>
+
+<!-- Services -->
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Personal Training</h3>
+<p>Customized workout plans and one-on-one coaching.</p>
+</div>
+
+<div class="card">
+<h3>Strength Training</h3>
+<p>Build muscle and increase power with expert guidance.</p>
+</div>
+
+<div class="card">
+<h3>Cardio Fitness</h3>
+<p>Improve endurance and overall cardiovascular health.</p>
+</div>
+
+<div class="card">
+<h3>Nutrition Support</h3>
+<p>Professional diet guidance to maximize your results.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Trainers -->
+
+<section id="trainers">
+<div class="container">
+
+<div class="section-title">
+<h2>Expert Trainers</h2>
+</div>
+
+<div class="trainers">
+
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80" alt="">
+<div class="trainer-info">
+<h3>Michael Johnson</h3>
+<p>Strength & Conditioning Coach</p>
+</div>
+</div>
+
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="">
+<div class="trainer-info">
+<h3>Sarah Wilson</h3>
+<p>Fitness & Nutrition Specialist</p>
+</div>
+</div>
+
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80" alt="">
+<div class="trainer-info">
+<h3>David Lee</h3>
+<p>Certified Personal Trainer</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- Membership Plans -->
+
+<section id="plans">
+<div class="container">
+
+<div class="section-title">
+<h2>Membership Plans</h2>
+</div>
+
+<div class="plan-grid">
+
+<div class="plan">
+<h3>Basic</h3>
+<div class="price">₹999/mo</div>
+<ul>
+<li>Gym Access</li>
+<li>Locker Facility</li>
+<li>Basic Support</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+
+<div class="plan">
+<h3>Premium</h3>
+<div class="price">₹1,999/mo</div>
+<ul>
+<li>All Basic Features</li>
+<li>Personal Trainer</li>
+<li>Nutrition Guidance</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+
+<div class="plan">
+<h3>Elite</h3>
+<div class="price">₹2,999/mo</div>
+<ul>
+<li>Unlimited Access</li>
+<li>Dedicated Coach</li>
+<li>Custom Diet Plan</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-box">
+<p><strong>📍 Address:</strong> 123 Fitness Street, New Delhi, India</p>
+<p><strong>📞 Phone:</strong> +91 98765 43210</p>
+<p><strong>✉ Email:</strong> info@powerfitgym.com</p>
+<p><strong>⏰ Hours:</strong> Monday - Sunday | 5:00 AM - 11:00 PM</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 PowerFit Gym. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
